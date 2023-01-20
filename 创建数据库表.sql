@@ -1,0 +1,31 @@
+-- 创建数据库
+CREATE DATABASE  IF NOT EXISTS hello;
+
+DROP DATABASE  IF EXISTS hello;
+
+-- `table键上方,特殊字符
+USE `school`;
+
+-- 查看数据库
+SHOW DATABASES;
+
+-- 创建表
+/*
+AUTO_INCREMENT 自增
+COMMENT 备注
+`字段名` 列类型 属性 索引 注释
+*/
+CREATE TABLE IF NOT EXISTS `classromm`(
+	`id` INT(4) NOT NULL AUTO_INCREMENT COMMENT '编号',
+	`name` VARCHAR(30) NOT NULL DEFAULT '匿名' COMMENT'项目',
+	`pwd` VARCHAR(20) NOT NULL DEFAULT '123456' COMMENT'密码',
+	`sex` VARCHAR(2) NOT NULL DEFAULT'女' COMMENT'性别',
+	`birthday` DATETIME DEFAULT NULL COMMENT'出生日期',
+	`address` VARCHAR(100) DEFAULT NULL COMMENT'家庭住址',
+	`email` VARCHAR(50) DEFAULT NULL COMMENT'邮箱',
+	PRIMARY KEY (`id`)
+)ENGINE INNODB DEFAULT CHARSET=utf8
+
+
+
+
